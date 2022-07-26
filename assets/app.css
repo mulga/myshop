@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700,700i&subset=latin-ext");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  list-style: none;
+  transition: all 400ms;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+:root {
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a744;
+  --color-danger: #dc3644;
+  --color-warning: #ffc109;
+  --color-info: #18a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-white: #ffff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+/* header */
+
+header {
+  background-color: var(--color-primary);
+  /* box-shadow: 0 1px 4px 0.5px; */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-light);
+}
+
+#cart-icon {
+  color: var(--color-light);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* cart */
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -110%;
+  width: 400px;
+  height: 100vh;
+  padding: 20px;
+  background-color: var(--color-light);
+  z-index: 99;
+  -webkit-box-shadow: -3px 0px 21px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: -3px 0px 21px 3px rgba(0, 0, 0, 0.26);
+  transition: all 300ms;
+}
+
+.cart.active {
+  right: 0;
+  transition: all 300ms;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.cart-product-title {
+  font-size: 1rem;
+  /* text-transform: uppercase; */
+}
+
+.cart-price {
+  font-weight: 500;
+}
+
+.cart-quantity {
+  border: 1px solid var(--color-secondary);
+  /* outline-color: transparent; */
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove {
+  font-size: 24px;
+  color: var(--color-danger);
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--color-secondary);
+}
+
+.total-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.total-price {
+  margin-left: 0.5rem;
+}
+
+.btn-buy {
+  display: flex;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  background-color: var(--color-danger);
+  border: none;
+  color: var(--color-light);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#close-cart {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+
+#close-cart:hover {
+  /* font-size: 1.6rem; */
+}
+
+/* Shop */
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.shop {
+  /* margin-top: 2rem; */
+}
+
+/* shop-content */
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 2rem;
+}
+
+.product-box {
+  position: relative;
+}
+
+.product-box:hover {
+  padding: 10px;
+  border: 1px solid var(--color-secondary);
+}
+
+.product-image {
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-family: 500;
+}
+
+.add-cart {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add-cart:hover {
+  background-color: var(--color-success);
+}
+
+/* Responsive  */
+
+@media (max-width: 768px) {
+  .cart {
+    width: 100%;
+  }
+}
